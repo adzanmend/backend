@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "messages",
+  "info": {
+    "name": "messages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sender_id": {
+      "type": "biginteger"
+    },
+    "receiver_id": {
+      "type": "biginteger"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "customers": {
+      "via": "messages",
+      "collection": "customers"
+    },
+    "owners": {
+      "via": "messages",
+      "collection": "owners"
+    }
+  }
+}

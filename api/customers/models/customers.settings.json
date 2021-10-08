@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "name": "customers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "richtext"
+    },
+    "phone": {
+      "type": "richtext"
+    },
+    "email": {
+      "type": "email"
+    },
+    "messages": {
+      "collection": "messages",
+      "via": "customers",
+      "dominant": true
+    }
+  }
+}

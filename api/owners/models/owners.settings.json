@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "owners",
+  "info": {
+    "name": "owners",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "richtext"
+    },
+    "name": {
+      "type": "richtext"
+    },
+    "password": {
+      "type": "password"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "richtext"
+    },
+    "messages": {
+      "collection": "messages",
+      "via": "owners",
+      "dominant": true
+    }
+  }
+}
